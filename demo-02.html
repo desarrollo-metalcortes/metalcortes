@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1440, initial-scale=1.0">
+    <title>Mockup - DEMO-02 Cotizador Metalcortes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500;600;700&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { naranja: '#F26522', carbon: '#231F20', grafito: '#3C3C3B', grisclaro: '#F4F4F4', grismedio: '#D1D1D1', gristexto: '#9E9E9E', exito: '#2E7D32', ambar: '#F59E0B', error: '#D32F2F', info: '#1565C0' }, fontFamily: { montserrat: ['Montserrat', 'sans-serif'], sans: ['Open Sans', 'sans-serif'], mono: ['Roboto Mono', 'monospace'] } } }
+        }
+    </script>
+</head>
+<body class="flex w-[1440px] h-[900px] mx-auto bg-grisclaro text-carbon font-sans overflow-hidden border border-grismedio shadow-lg mt-4">
+    
+    <!-- Sidebar -->
+    <aside class="w-[220px] bg-carbon flex flex-col h-full shrink-0">
+        <div class="h-[64px] flex flex-col items-center justify-center pt-2">
+            <div class="flex items-center space-x-1"><span class="text-naranja font-montserrat font-bold text-xl tracking-tighter">M</span><span class="text-white font-montserrat font-bold text-sm tracking-widest">METALCORTES</span></div>
+            <span class="text-gristexto text-[9px] mt-1 font-sans">Plataforma Operativa</span>
+        </div>
+        <div class="h-[72px] flex items-center px-4 space-x-3">
+            <div class="w-[28px] h-[28px] rounded-full bg-grafito text-naranja flex items-center justify-center text-xs font-bold relative">JM<span class="absolute bottom-0 right-0 w-2 h-2 bg-exito rounded-full border border-carbon"></span></div>
+            <div class="flex flex-col"><span class="text-white text-[13px] font-bold leading-tight">Juan Martínez</span><span class="text-gristexto text-[11px]">Asesor Comercial</span></div>
+        </div>
+        <nav class="flex-1 px-2 pt-4 overflow-y-auto">
+            <div class="text-[10px] text-gristexto uppercase tracking-[1px] mb-2 px-2 font-semibold">Comercial</div>
+            <a href="demo-01.html" class="flex items-center px-2 py-2 mb-1 text-gristexto border-l-[3px] border-transparent hover:bg-grafito hover:text-white rounded-r transition-colors"><i data-lucide="home" class="w-4 h-4 mr-2"></i><span class="text-[13px]">Dashboard</span></a>
+            <a href="demo-02.html" class="flex items-center px-2 py-2 mb-1 bg-naranja/15 border-l-[3px] border-naranja text-naranja rounded-r transition-colors"><i data-lucide="file-text" class="w-4 h-4 mr-2"></i><span class="text-[13px]">Propuestas</span></a>
+            <a href="demo-03.html" class="flex items-center px-2 py-2 mb-1 text-gristexto border-l-[3px] border-transparent hover:bg-grafito hover:text-white rounded-r transition-colors"><i data-lucide="clipboard-list" class="w-4 h-4 mr-2"></i><span class="text-[13px]">Cotizaciones</span></a>
+            <a href="demo-06.html" class="flex items-center px-2 py-2 mb-1 text-gristexto border-l-[3px] border-transparent hover:bg-grafito hover:text-white rounded-r justify-between transition-colors">
+                <div class="flex items-center"><i data-lucide="layers" class="w-4 h-4 mr-2"></i><span class="text-[13px]">Órdenes de Trabajo</span></div><span class="bg-naranja text-white text-[10px] px-1.5 rounded-full font-mono">8</span>
+            </a>
+            <a href="demo-07.html" class="flex items-center px-2 py-2 mb-4 text-gristexto border-l-[3px] border-transparent hover:bg-grafito hover:text-white rounded-r justify-between transition-colors">
+                <div class="flex items-center"><i data-lucide="clipboard" class="w-4 h-4 mr-2"></i><span class="text-[13px]">OT Internas</span></div><span class="bg-naranja text-white text-[10px] px-1.5 rounded-full font-mono">3</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="flex-1 flex flex-col h-full relative">
+        <header class="h-[56px] bg-white border-b border-grismedio flex items-center justify-between px-6 shrink-0 z-10">
+            <div class="flex items-center text-[13px]">
+                <span class="text-gristexto">Inicio</span><i data-lucide="chevron-right" class="w-3 h-3 mx-2 text-gristexto"></i>
+                <span class="text-gristexto">Propuestas</span><i data-lucide="chevron-right" class="w-3 h-3 mx-2 text-gristexto"></i>
+                <span class="text-carbon font-bold">Nueva propuesta</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative cursor-pointer text-grafito hover:text-carbon"><i data-lucide="bell" class="w-5 h-5"></i><span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-error text-white text-[9px] flex items-center justify-center rounded-full font-bold">3</span></div>
+                <div class="flex items-center space-x-2 cursor-pointer group"><div class="w-[28px] h-[28px] rounded-full bg-grafito text-naranja flex items-center justify-center text-xs font-bold">JM</div><span class="text-[13px] font-medium text-carbon group-hover:text-naranja">Juan Martínez</span><i data-lucide="chevron-down" class="w-4 h-4 text-gristexto"></i></div>
+            </div>
+        </header>
+
+        <div class="p-6 flex-1 overflow-auto pb-[88px]">
+            <div class="mb-5">
+                <h1 class="text-2xl font-montserrat font-bold text-carbon mb-1">Nueva propuesta comercial</h1>
+                <p class="text-[13px] text-grafito">Ingresa los datos del cliente y agrega los ítems a cotizar</p>
+            </div>
+
+            <!-- Encabezado de la propuesta -->
+            <div class="bg-white border border-grismedio rounded-[6px] p-5 shadow-sm mb-6 flex gap-8">
+                <div class="w-[60%] flex flex-col gap-4">
+                    <div>
+                        <label class="block text-[11px] font-medium text-grafito mb-1">Empresa o cliente *</label>
+                        <div class="relative">
+                            <i data-lucide="search" class="w-4 h-4 text-gristexto absolute left-3 top-2.5"></i>
+                            <input type="text" value="Industrias Metálicas del Norte SAS" class="w-full border border-grismedio rounded px-9 py-2 text-[13px] text-carbon focus:outline-none focus:border-naranja bg-white">
+                        </div>
+                        <div class="text-[11px] text-gristexto font-mono mt-1">NIT: 900.123.456-7</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[11px] font-medium text-grafito mb-1">Persona de contacto</label>
+                            <select class="w-full border border-grismedio rounded px-3 py-2 text-[13px] text-carbon focus:outline-none focus:border-naranja bg-white"><option>Ing. Carlos Rodríguez — Jefe de Compras</option></select>
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-medium text-grafito mb-1">Teléfono del contacto</label>
+                            <input type="text" value="+57 300 456 7890" readonly class="w-full border border-transparent bg-grisclaro rounded px-3 py-2 text-[13px] text-carbon font-mono">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-medium text-grafito mb-1">Correo del contacto</label>
+                        <input type="text" value="c.rodriguez@industriasmetalicas.com" readonly class="w-full border border-transparent bg-grisclaro rounded px-3 py-2 text-[13px] text-carbon">
+                    </div>
+                </div>
+
+                <div class="w-[40%] flex flex-col gap-4 bg-grisclaro/50 p-4 rounded border border-grismedio/50">
+                    <div>
+                        <label class="block text-[11px] font-medium text-grafito mb-1">Consecutivo</label>
+                        <div class="font-mono text-[15px] font-bold text-naranja">PROP-2026-000089</div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[11px] font-medium text-grafito mb-1">Fecha de elaboración</label>
+                            <div class="text-[13px] text-carbon">29/04/2026</div>
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-medium text-grafito mb-1">Elaborado por</label>
+                            <div class="text-[13px] text-carbon">Juan Martínez — Asesor Comercial</div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-medium text-grafito mb-1">Válida por (días) *</label>
+                        <div class="flex items-center space-x-3">
+                            <input type="number" value="15" class="w-20 border border-grismedio rounded px-3 py-1.5 text-[13px] text-carbon focus:outline-none focus:border-naranja bg-white text-center">
+                            <span class="text-[11px] text-gristexto">Vence el: 14/05/2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de ítems a cotizar -->
+            <div class="mb-6">
+                <div class="flex justify-between items-end mb-3">
+                    <h2 class="text-[18px] font-montserrat font-semibold text-carbon">Ítems a fabricar</h2>
+                    <button class="bg-naranja hover:bg-[#D4541A] text-white px-3 py-1.5 rounded flex items-center text-[12px] font-medium transition-colors"><i data-lucide="plus" class="w-3 h-3 mr-1.5"></i> Agregar ítem</button>
+                </div>
+                
+                <div class="bg-white border border-grismedio rounded-md overflow-x-auto shadow-sm">
+                    <table class="w-full text-left border-collapse whitespace-nowrap min-w-[1000px]">
+                        <thead>
+                            <tr class="bg-grisclaro border-b border-grismedio text-[11px] font-semibold text-grafito uppercase">
+                                <th class="px-3 py-2 w-[40px] text-center">#</th><th class="px-3 py-2 w-[200px]">Descripción de la pieza</th><th class="px-3 py-2 w-[150px]">Material</th><th class="px-3 py-2 w-[80px]">Calibre</th><th class="px-3 py-2 w-[90px]">Largo (mm)</th><th class="px-3 py-2 w-[90px]">Ancho (mm)</th><th class="px-3 py-2 w-[80px]">Cantidad</th><th class="px-3 py-2 w-[160px]">Proceso</th><th class="px-3 py-2 w-[130px] text-right">Valor unit. (COP)</th><th class="px-3 py-2 w-[130px] text-right">Subtotal (COP)</th><th class="px-3 py-2 w-[50px] text-center"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-[13px]">
+                            <!-- Item 1 -->
+                            <tr class="border-b border-grismedio/50 group hover:bg-grisclaro/30">
+                                <td class="px-3 py-2 text-center text-gristexto">1</td>
+                                <td class="px-3 py-2"><input type="text" value="Tapa lateral derecha" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none"></td>
+                                <td class="px-3 py-2"><select class="w-full border border-transparent hover:border-grismedio rounded px-1 py-1 text-[13px] outline-none"><option>Cold rolled</option></select></td>
+                                <td class="px-3 py-2"><select class="w-full border border-transparent hover:border-grismedio rounded px-1 py-1 text-[13px] outline-none"><option>14</option></select></td>
+                                <td class="px-3 py-2"><input type="text" value="1500" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none font-mono"></td>
+                                <td class="px-3 py-2"><input type="text" value="800" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none font-mono"></td>
+                                <td class="px-3 py-2"><input type="number" value="10" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none text-center"></td>
+                                <td class="px-3 py-2"><select class="w-full border border-transparent hover:border-grismedio rounded px-1 py-1 text-[13px] outline-none"><option>Corte, Doblado</option></select></td>
+                                <td class="px-3 py-2"><input type="text" value="$ 45.000" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none font-mono text-right bg-naranja/5"></td>
+                                <td class="px-3 py-2 text-right font-mono font-bold text-carbon">$ 450.000</td>
+                                <td class="px-3 py-2 text-center"><button class="text-gristexto hover:text-error opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="trash-2" class="w-4 h-4"></i></button></td>
+                            </tr>
+                            <!-- Item 2 -->
+                            <tr class="border-b border-grismedio/50 group hover:bg-grisclaro/30">
+                                <td class="px-3 py-2 text-center text-gristexto">2</td>
+                                <td class="px-3 py-2"><input type="text" value="Base inferior estructura" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none"></td>
+                                <td class="px-3 py-2"><select class="w-full border border-transparent hover:border-grismedio rounded px-1 py-1 text-[13px] outline-none"><option>Galvanizado</option></select></td>
+                                <td class="px-3 py-2"><select class="w-full border border-transparent hover:border-grismedio rounded px-1 py-1 text-[13px] outline-none"><option>16</option></select></td>
+                                <td class="px-3 py-2"><input type="text" value="2000" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none font-mono"></td>
+                                <td class="px-3 py-2"><input type="text" value="1200" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none font-mono"></td>
+                                <td class="px-3 py-2"><input type="number" value="5" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none text-center"></td>
+                                <td class="px-3 py-2"><select class="w-full border border-transparent hover:border-grismedio rounded px-1 py-1 text-[13px] outline-none"><option>Corte</option></select></td>
+                                <td class="px-3 py-2"><input type="text" value="$ 85.000" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none font-mono text-right bg-naranja/5"></td>
+                                <td class="px-3 py-2 text-right font-mono font-bold text-carbon">$ 425.000</td>
+                                <td class="px-3 py-2 text-center"><button class="text-gristexto hover:text-error opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="trash-2" class="w-4 h-4"></i></button></td>
+                            </tr>
+                            <!-- Item 3 -->
+                            <tr class="border-b border-grismedio/50 group hover:bg-grisclaro/30">
+                                <td class="px-3 py-2 text-center text-gristexto">3</td>
+                                <td class="px-3 py-2"><input type="text" value="Refuerzo central" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none"></td>
+                                <td class="px-3 py-2"><select class="w-full border border-transparent hover:border-grismedio rounded px-1 py-1 text-[13px] outline-none"><option>Acero inoxidable</option></select></td>
+                                <td class="px-3 py-2"><select class="w-full border border-transparent hover:border-grismedio rounded px-1 py-1 text-[13px] outline-none"><option>12</option></select></td>
+                                <td class="px-3 py-2"><input type="text" value="750" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none font-mono"></td>
+                                <td class="px-3 py-2"><input type="text" value="400" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none font-mono"></td>
+                                <td class="px-3 py-2"><input type="number" value="20" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none text-center"></td>
+                                <td class="px-3 py-2"><select class="w-full border border-transparent hover:border-grismedio rounded px-1 py-1 text-[13px] outline-none"><option>Corte, Rolado</option></select></td>
+                                <td class="px-3 py-2"><input type="text" value="$ 32.000" class="w-full border border-transparent hover:border-grismedio focus:border-naranja rounded px-2 py-1 text-[13px] outline-none font-mono text-right bg-naranja/5"></td>
+                                <td class="px-3 py-2 text-right font-mono font-bold text-carbon">$ 640.000</td>
+                                <td class="px-3 py-2 text-center"><button class="text-gristexto hover:text-error opacity-0 group-hover:opacity-100 transition-opacity"><i data-lucide="trash-2" class="w-4 h-4"></i></button></td>
+                            </tr>
+                            <!-- Fila Agregar -->
+                            <tr class="bg-grisclaro">
+                                <td colspan="11" class="p-2">
+                                    <div class="border-2 border-dashed border-grismedio rounded flex items-center justify-center py-2 cursor-pointer hover:border-naranja transition-colors group">
+                                        <i data-lucide="plus" class="w-3.5 h-3.5 text-gristexto group-hover:text-naranja mr-2"></i>
+                                        <span class="text-[12px] text-gristexto group-hover:text-naranja">Haz clic en '+ Agregar ítem' o presiona Enter al final de una fila</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Panel de totales y condiciones -->
+            <div class="flex gap-8">
+                <div class="w-[55%] flex flex-col gap-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[11px] font-medium text-grafito mb-1">Forma de pago *</label>
+                            <select class="w-full border border-grismedio rounded px-3 py-2 text-[13px] text-carbon focus:outline-none focus:border-naranja bg-white"><option>50% anticipo — 50% contra entrega</option><option>Contado</option></select>
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-medium text-grafito mb-1">Tiempo de entrega estimado *</label>
+                            <div class="flex">
+                                <input type="number" value="15" class="w-16 border border-grismedio rounded-l px-2 py-2 text-[13px] text-center text-carbon focus:outline-none focus:border-naranja focus:z-10 bg-white">
+                                <select class="flex-1 border border-grismedio border-l-0 rounded-r px-2 py-2 text-[13px] text-carbon focus:outline-none focus:border-naranja bg-white"><option>días hábiles</option></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-medium text-grafito mb-1">Lugar de entrega</label>
+                        <input type="text" value="Instalaciones del cliente — Cra 15 #45-20, Bogotá" class="w-full border border-grismedio rounded px-3 py-2 text-[13px] text-carbon focus:outline-none focus:border-naranja bg-white">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-medium text-grafito mb-1">Observaciones y condiciones especiales</label>
+                        <textarea class="w-full border border-grismedio rounded px-3 py-2 text-[13px] text-carbon focus:outline-none focus:border-naranja bg-white resize-none h-20">Precios sujetos a variaciones del precio del acero. Incluye despacho. Garantía de 30 días contra defectos de fabricación.</textarea>
+                    </div>
+                </div>
+                <div class="w-[45%]">
+                    <div class="bg-grisclaro border border-grismedio rounded-[6px] p-5">
+                        <div class="flex justify-between items-center mb-2"><span class="text-[13px] text-grafito">Subtotal ítems:</span><span class="font-mono text-[14px] text-carbon">$ 1.515.000</span></div>
+                        <div class="flex justify-between items-center mb-4"><span class="text-[13px] text-grafito">IVA (19%):</span><span class="font-mono text-[14px] text-carbon">$ 287.850</span></div>
+                        <hr class="border-grismedio mb-4">
+                        <div class="flex justify-between items-end mb-1"><span class="text-[14px] font-bold text-carbon">TOTAL PROPUESTA:</span><span class="font-montserrat text-[20px] font-bold text-naranja">$ 1.802.850</span></div>
+                        <div class="flex justify-between items-center mt-2"><span class="text-[12px] text-gristexto">Anticipo requerido (50%):</span><span class="text-[12px] text-gristexto font-mono">$ 901.425</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Bar Conectada -->
+        <div class="absolute bottom-0 w-full h-[64px] bg-white border-t border-grismedio px-6 flex items-center justify-between z-20 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+            <a href="demo-01.html" class="text-[13px] font-medium text-grafito hover:text-carbon flex items-center transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> Cancelar
+            </a>
+            <div class="flex items-center space-x-3">
+                <button class="bg-transparent border border-grismedio text-carbon hover:bg-grisclaro px-4 py-2 rounded flex items-center text-[13px] font-medium transition-colors">
+                    <i data-lucide="save" class="w-4 h-4 mr-2"></i> Guardar propuesta
+                </button>
+                <button class="bg-transparent border border-grismedio text-carbon hover:bg-grisclaro px-4 py-2 rounded flex items-center text-[13px] font-medium transition-colors">
+                    <i data-lucide="download" class="w-4 h-4 mr-2"></i> Descargar PDF del cliente
+                </button>
+                <a href="demo-03.html" class="bg-naranja hover:bg-[#D4541A] text-white px-5 py-2 rounded flex items-center text-[13px] font-medium transition-colors shadow-sm">
+                    Generar cotización formal <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
